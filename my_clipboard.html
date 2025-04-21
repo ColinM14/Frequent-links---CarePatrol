@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Clipboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2em;
+            max-width: 600px;
+            margin: auto;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+        }
+        .link-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .link-row button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #1976d2;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .link-row button:hover {
+            background-color: #145a9c;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Clipboard</h1>
+
+    <div class="link-row">
+        <span>Caregiver Calendar</span>
+        <button onclick="copyToClipboard('https://lp.constantcontactpages.com/sl/FLRqGEs/caregiverresourcecalendar')">Copy</button>
+    </div>
+    
+    <div class="link-row">
+        <span>April Event</span>
+        <button onclick="copyToClipboard('https://lp.constantcontactpages.com/sl/izOZuy5/HeartfeltConversations')">Copy</button>
+    </div>
+    
+    <div class="link-row">
+        <span>May Event</span>
+        <button onclick="copyToClipboard('https://lp.constantcontactpages.com/sl/UjSEmY8/Gettingoldchangesus')">Copy</button>
+    </div>
+    
+    <div class="link-row">
+        <span>June Event 6/12</span>
+        <button onclick="copyToClipboard('https://lp.constantcontactpages.com/sl/bG1FLSE/UnderstandingAlzheimers')">Copy</button>
+    </div>
+    
+    <div class="link-row">
+        <span>Events Page</span>
+        <button onclick="copyToClipboard('https://carepatrol.com/colorado-springs-pueblo/events/')">Copy</button>
+    </div>
+    
+    <div class="link-row">
+        <span>Senior Resource Guide</span>
+        <button onclick="copyToClipboard('https://linktr.ee/carepatrol_seniorguide')">Copy</button>
+    </div>
+    
+<script>
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(function() {
+        alert("Copied to clipboard: " + text);
+    }, function(err) {
+        alert("Failed to copy: " + err);
+    });
+}
+</script>
+</body>
+</html>
